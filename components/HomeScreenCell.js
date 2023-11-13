@@ -3,10 +3,12 @@ import {  Text, View,  Image } from 'react-native';
 import { Cell } from 'react-native-tableview-simple';
 import styles from '../services/styles';
 
+
 const HomeScreenCell = (props) => {
     return (
       <Cell
       {...props}
+      onPress = {props.action}
       cellContentView = {
           <View style={[styles.restaurantView, styles.container]}>
             <Image

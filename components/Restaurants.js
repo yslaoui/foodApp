@@ -12,7 +12,6 @@ const Restaurants = ({navigation}) =>
         <ScrollView>
           <TableView>
             <Section 
-              header='firstSection' 
               separatorTintColor='#ccc' 
               hideSurroundingSeparators={true}
               >
@@ -20,7 +19,27 @@ const Restaurants = ({navigation}) =>
                   title= "Joe's Gelato"
                   tagline="Desert, Ice cream, £££"
                   eta="10-30"
-                  imgUri = {require('../assets/images/gelato.jpg')} 
+                  imgUri = {require('../assets/images/gelato.jpg')}
+                  action = {() => navigation.navigate('Menu')}
+ 
+                />
+                <HomeScreenCell
+                  title= "Joe's Pizza"
+                  tagline="Italian, Pizza, ££"
+                  eta="10-30"
+                  imgUri = {require('../assets/images/pizza.jpg')} 
+                />
+                <HomeScreenCell
+                  title= "Joe's Mediteranean"
+                  tagline="Mediteranean, Fine dining, ££££"
+                  eta="10-30"
+                  imgUri = {require('../assets/images/mediteranean.jpg')} 
+                />
+                <HomeScreenCell
+                  title= "Joe's Asian"
+                  tagline="Asian, Sushis, £££"
+                  eta="10-30"
+                  imgUri = {require('../assets/images/asian.jpg')} 
                 />
             </Section>
           </TableView>
