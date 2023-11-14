@@ -15,7 +15,7 @@ const Restaurants = ({ navigation}) =>
           <TableView>
             <Section 
               separatorTintColor='#ccc' 
-              hideSurroundingSeparators={true}
+              hideSeparator={true}
               >
                 <HomeScreenCell
                   title= "Gelato Garden"
@@ -23,23 +23,26 @@ const Restaurants = ({ navigation}) =>
                   eta="10-30"
                   imgUri = {require('../assets/images/gelato.jpg')}
                   action = {() => {
-                    navigation.navigate('Menu', {items: gelatoData})}}
+                    navigation.navigate('Menu', 
+                                        {items: gelatoData})}}
                 />
                 <HomeScreenCell
                   title= "Pizza Fresco"
                   tagline="Italian, Pizza, ££"
-                  eta="10-30"
+                  eta="5-10"
                   imgUri = {require('../assets/images/pizza.jpg')}
                   action = {() => {
-                    navigation.navigate('Menu', {items: pizzaData})}}
+                    navigation.navigate('Menu', 
+                                        {items: pizzaData})}}
                 />
                 <HomeScreenCell
                   title= "Lotus Blossom Bistro"
-                  tagline="Asian, Sushis, £££"
-                  eta="10-30"
+                  tagline="Asian, Fusion, £££"
+                  eta="40+"
                   imgUri = {require('../assets/images/asian.jpg')}
                   action = {() => {
-                    navigation.navigate('Menu', {items: asianData})}}
+                    navigation.navigate('Menu', 
+                                        {items: asianData})}}
                 />
             </Section>
           </TableView>

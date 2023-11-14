@@ -7,13 +7,13 @@ const styles = StyleSheet.create({
       backgroundColor: '#f0f0f0',
       // alignItems: 'center',
       // justifyContent: 'center',
+      // borderColor: 'red',
+      // borderWidth: 5
     },
     restaurantView: 
     {
       height: 290, 
       padding: 20,  
-      borderWidth: 5, 
-      borderColor: 'blue'
     },
     image: 
     {

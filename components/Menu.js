@@ -14,7 +14,11 @@ const Menu = ({route, navigation}) =>
         {sectionData.map (section => (
              <Section header={section.header}>
                  {section.cell.map(row => (
-                     <Cell title = {row.title} onPress = {() => alert(`Hi ${row.title} :)`)}></Cell>
+                     <Cell 
+                        title = {row.title}
+                        cellStyle = 'RightDetail' 
+                        detail = {row.price}
+                        onPress = {() => alert(`${row.title} ordered. Enjoy !`)}></Cell>
                  ))
                  }             
                  </Section>
