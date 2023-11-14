@@ -3,21 +3,9 @@ import {  Text, View, Button, ScrollView, SafeAreaView, Image } from 'react-nati
 import { Cell, Section, TableView } from 'react-native-tableview-simple';
 import styles from '../services/styles';
 import HomeScreenCell from './HomeScreenCell';
+import menuData from '../services/menuData';
 
-const gelatoData = [
-  {header: "Gelato", cell: [{title: "Gelato"}, {title: "Chocolate"}, {title: "Mint"}]},
-  {header: "Coffee", cell: [{title: "Flat White"}, {title: "Latte"}, {title: "Caffe Americano"}]},
-];
-
-const pizzaData = [
-  {header: "Pizza", cell: [{title: "Margherita"}, {title: "Prosciutto Fungi"}, {title: "Emiliana"}]},
-  {header: "Pasta", cell: [{title: "Pomodoro"}, {title: "Carbonara"}, {title: "Marinara"}]},
-];
-
-const asianData = [
-  {header: "Small Bites", cell: [{title: "Chicken Satay"}, {title: "Prosciutto Fungi"}, {title: "Duck Dumplings"}]},
-  {header: "Mains", cell: [{title: "Szechuan"}, {title: "Mee Goreng"}, {title: "Nasi Lemak"}]},
-];
+const {gelatoData, pizzaData, asianData} = menuData
 
 const Restaurants = ({ navigation}) => 
 {
@@ -30,7 +18,7 @@ const Restaurants = ({ navigation}) =>
               hideSurroundingSeparators={true}
               >
                 <HomeScreenCell
-                  title= "Gelateria"
+                  title= "Gelato Garden"
                   tagline="Desert, Ice cream, £££"
                   eta="10-30"
                   imgUri = {require('../assets/images/gelato.jpg')}
