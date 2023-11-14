@@ -1,14 +1,28 @@
 import {React} from 'react';
-import {  Text, View, Button } from 'react-native';
+import {  Text, View, Button, ScrollView, Image, Switch, TextInput} from 'react-native';
 import styles from '../services/styles';
+import {Cell, Section, TableView} from 'react-native-tableview-simple'
 
 
-const Menu = () => 
+
+const Menu = ({route, navigation}) => 
 {
+  const sectionData = route.params.items;
   return (
-    <View style={styles.container}>
-      <Text> This is the Menu screen</Text>
-    </View>
+    <ScrollView>
+      <TableView>
+        {sectionData.map (section => (
+             <Section header={section.header}>
+                 {section.cell.map(row => (
+                     <Cell title = {row.title} onPress = {() => alert(`Hi ${row.title} :)`)}></Cell>
+                 ))
+                 }             
+                 </Section>
+           ))}
+
+      </TableView>
+    </ScrollView>
+
   )
 }
 
